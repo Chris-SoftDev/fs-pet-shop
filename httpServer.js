@@ -38,7 +38,7 @@ var handleRequest = function (req, res) {
 
                 // Checks if request parameter is within range of JSON data
                 const isNumber = /^\d+$/.test(urlParam);
-                if (urlParam < 0 || urlParam > (petsObj.length -1) || !isNumber) {
+                if (urlParam < 0 || urlParam > (petsObj.length -1) || isNumber) {
                     res.statusCode = 404;
                     res.setHeader('Content-Type', 'text/plain');
                     res.end('Not found');                    
